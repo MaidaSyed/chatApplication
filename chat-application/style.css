@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+}
+
+.title {
+    width: 100%;
+    height: 150px;
+    font-family: "Audiowide", sans-serif;
+    background-color: #000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    box-shadow: 0 0 10px #000080;
+    text-align: center;
+}
+
+#chat-container {
+    display: none;
+    max-width: 400px;
+    margin: 30px auto;
+    border: 5px solid #000080;
+    box-shadow: 0 0 10px #000080;
+    border-radius: 10px;
+    background-color: #b2eefd;
+}
+
+#chat-data {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000080;
+    margin: 0;
+    /* font-size: 25px; */
+    color: #fff;
+}
+
+#chat-name {
+    display: flex;
+}
+
+#chat-name i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000080;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+#chat-name p {
+    margin: 3px 10px;
+    font-size: 20px;
+    font-family: "Sofia", sans-serif;
+}
+
+#chat-icons i {
+    margin-right: 15px;
+}
+
+
+#chat-inner-container {
+    margin: 30px;
+    padding-top: 0;
+    border-right: none;
+}
+
+#messages {
+    margin: 0px;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    border: 1px solid #000080;
+}
+
+#messages::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ccc;
+}
+
+#messages::-webkit-scrollbar-thumb:hover {
+    background-color: #000080;
+    border-radius: 10px;
+}
+
+.messageDiv {
+    display: flex;
+    margin: 20px 5px;
+}
+
+.messageDiv.currentUser {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.messageDiv.otherUser {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.messageContent {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 60%;
+}
+
+.messageActions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+
+.messageDiv h4 {
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+    color: #888;
+    font-family: "Trirong", serif;
+}
+
+.messageDiv h2 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+    font-family: "Audiowide", sans-serif;
+    text-transform: uppercase;
+}
+
+.messageDiv h3 {
+    font-size: 16px;
+    margin: 5px 10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.messageDiv h5 {
+    font-size: 12px;
+    margin: 5px 0;
+    color: #888;
+    text-align: right;
+    font-family: "Trirong", serif;
+}
+
+.messageDiv h1 {
+    display: none;
+}
+
+.messageIcons {
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.messageIcons .editIcon {
+    background-color: #000080;
+    padding: 5px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.messageIcons .deleteIcon {
+    background-color: #ff1229;
+    padding: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#message-input {
+    margin: 15px 7px;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #000080;
+    border-radius: 10px;
+    outline: none;
+}
+
+#send-button {
+    padding: 10px;
+    background-color: #000080;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #045bb8;
+    transform: scale(1.1);
+}
+
+#logout-button {
+    padding: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    float: right;
+    transition: 0.3s ease;
+}
+
+#logout-button:hover {
+    background-color: #ff1229;
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 630px) {
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .title {
+        font-size: 25px;
+    }
+
+    #chat-name i {
+        font-size: 20px;
+    }
+
+    #chat-name p {
+        font-size: 13px;
+    }
+    #chat-icons i {
+        margin-right: 5px;
+    }
+    .messageContent {
+        max-width: 50%;
+    }
+}
+
+.nameBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nameBox button {
+    margin: 20px 0;
+    width: 200px;
+    padding: 15px;
+    background-color: #000080;
+    font-weight: 900;
+    color: #e2e2e2;
+    outline: none;
+    border: none;
+}
+
+.input-container {
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    width: 200px;
+}
+
+.input-field {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000080;
+    background: transparent;
+    padding: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    text-align: center;
+    pointer-events: none;
+    color: #000080;
+    transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
+
+.input-field:focus+.input-label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #045bb8;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.content,
+.edit-content {
+    display: none;
+    background-color: #000080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.content button,
+.edit-content button {
+    width: 40%;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: #000080;
+}
+
+.edit-content textarea {
+    padding: 7px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #ccc;
+    width: 80%;
+    height: 50px;
+    resize: none;
+}
